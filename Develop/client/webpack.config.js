@@ -21,15 +21,15 @@ module.exports = () => {
       }),
 
       new InjectManifest({
-        swSrc: './src-sw-js',
-        swDest: 'src-sw-js'
+        swSrc: './src-sw.js',
+        swDest: 'src-sw.js'
       }),
 
       new WebpackPwaManifest({
         fingerprints: false,
         inject: true, 
-        name: 'Text Editor',
-        short_name: 'Editor',
+        name: 'Just Another Text Editor',
+        short_name: 'JATE',
         description: 'Edit text in your browser!',
         background_color: '#99ff99',
         theme_color: '#99ff99',
@@ -39,7 +39,7 @@ module.exports = () => {
           {
             src: path.resolve('src/images/logo.png'),
             sizes:[96, 128, 192, 256, 384, 512],
-            destionation: path.join('assets', 'icons'),
+            destination: path.join('assets', 'icons'),
           },
         ],
       }),
